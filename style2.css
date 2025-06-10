@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* General page styling */
+/* Entire page */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #110e0e;
@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-/* Navbar with gradient background */
+/* gradient border */
 nav {
   background: linear-gradient(to right, #8e44ad, #e6a6ec);
   padding: 15px 30px;
@@ -35,7 +35,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff; /* white text looks good on gradient */
+  color: #fff; 
   text-decoration: none;
   font-weight: bold;
 }
@@ -44,12 +44,12 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Main content area */
+/* Main content */
 .content {
   padding: 40px 80px;
 }
 
-/* Profile section */
+/* Profile  */
 .profile {
   text-align: center;
   margin-bottom: 30px;
@@ -72,10 +72,10 @@ nav ul li a:hover {
   color: #aaa;
 }
 
-/* Section titles */
+/* Section title */
 h2 {
   color: #8e44ad;
-  /* text-align: left is default */
+
 }
 
 /* Subheadings */
@@ -90,7 +90,7 @@ hr {
   margin-bottom: 30px;
 }
 
-/* Projects section - 2 column layout */
+/* Projects section */
 .project {
   display: flex;
   align-items: center;
@@ -104,7 +104,7 @@ hr {
 }
 
 .project-image img {
-  width: 250px; /* smaller image size */
+  width: 250px; 
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -116,14 +116,14 @@ hr {
   flex-direction: row-reverse;
 }
 
-/* Divider between projects */
+
 .project-divider {
   border: none;
   border-top: 2px solid #8e44ad;
   margin: 40px 0;
 }
 
-/* Fix scroll offset so content is not hidden under navbar */
+/* scroll to the top */
 #home,
 #about,
 #contact,
@@ -131,7 +131,7 @@ hr {
   scroll-margin-top: 80px;
 }
 
-/* Links - force consistent color for all states */
+/* Links all the same color */
 a,
 a:visited,
 a:link {
@@ -143,7 +143,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Make it responsive */
+
 @media (max-width: 768px) {
   .project {
     flex-direction: column;
