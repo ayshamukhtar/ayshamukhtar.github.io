@@ -1,141 +1,15 @@
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Entire page */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #110e0e;
   color: #e6a6ec;
-  margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* gradient border */
-nav {
-  background: linear-gradient(to right, #8e44ad, #e6a6ec);
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: #fff; 
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Main content */
-.content {
-  padding: 40px 80px;
-}
-
-/* Profile  */
-.profile {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.profile img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid #8e44ad;
-  object-fit: cover;
-}
-
-.profile h1 {
-  margin-top: 15px;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #aaa;
-}
-
-/* Section title */
-h2 {
-  color: #8e44ad;
-
-}
-
-/* Subheadings */
-h3 {
+h1, h2, h3 {
   color: #e6a6ec;
 }
 
-/* Divider between sections */
-hr {
-  border: none;
-  border-top: 2px solid #8e44ad;
-  margin-bottom: 30px;
-}
-
-/* Projects section */
-.project {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  gap: 20px;
-}
-
-.project-text {
-  flex: 1;
-}
-
-.project-image img {
-  width: 250px; 
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 2px solid #8e44ad;
-}
-
-/* Reverse project layout */
-.project.reverse {
-  flex-direction: row-reverse;
-}
-
-
-.project-divider {
-  border: none;
-  border-top: 2px solid #8e44ad;
-  margin: 40px 0;
-}
-
-/* scroll to the top */
-#home,
-#about,
-#contact,
-#projects {
-  scroll-margin-top: 80px;
-}
-
-/* Links all the same color */
-a,
-a:visited,
-a:link {
-  color: #8e44ad;
+a {
+  color: #e6a6ec;
   text-decoration: none;
 }
 
@@ -143,18 +17,95 @@ a:hover {
   text-decoration: underline;
 }
 
+.bg-gradient-purple {
+  background: linear-gradient(to right, #8e44ad, #e6a6ec);
+}
 
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    align-items: center;
-  }
+.text-light-purple {
+  color: #e6a6ec;
+}
 
-  .project.reverse {
-    flex-direction: column;
-  }
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #8e44ad;
+  object-fit: cover;
+}
 
-  .project-image img {
-    width: 90%;
-  }
+.border-purple {
+  border: 2px solid #8e44ad !important;
+}
+
+.card {
+  background-color: #1c1c1c;
+  color: #e6a6ec;
+}
+
+.card-title {
+  color: #e6a6ec;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Scroll-to-top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #8e44ad;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+#scrollTopBtn:hover {
+  background-color: #a66bbe;
+}
+
+/* Light mode styling */
+.light-mode {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.light-mode .navbar,
+.light-mode .bg-gradient-purple {
+  background: linear-gradient(to right, #f0f0f0, #d3a6ec) !important;
+}
+
+.light-mode .card {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.light-mode .card-title {
+  color: #8e44ad !important;
+}
+
+.light-mode .profile-pic {
+  border-color: #d3a6ec;
+}
+
+.light-mode a {
+  color: #8e44ad;
+}
+
+.light-mode .btn-outline-light {
+  border-color: #000;
+  color: #000;
+}
+
+/* Prevent sections from being hidden under sticky navbar */
+.section-offset {
+  scroll-margin-top: 100px;
 }
